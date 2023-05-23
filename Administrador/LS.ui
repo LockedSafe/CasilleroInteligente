@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>843</width>
+    <width>807</width>
     <height>600</height>
    </rect>
   </property>
@@ -679,7 +679,7 @@ QTableWidget QTableCornerButton::section
              <item>
               <widget class="QStackedWidget" name="stackedWidget">
                <property name="currentIndex">
-                <number>4</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="Pg_Datos">
                 <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -1290,7 +1290,7 @@ QTableWidget QTableCornerButton::section
                     </spacer>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit"/>
+                    <widget class="QLineEdit" name="LE_EC"/>
                    </item>
                    <item>
                     <spacer name="horizontalSpacer_21">
@@ -1404,6 +1404,9 @@ QTableWidget QTableCornerButton::section
                    </item>
                    <item>
                     <widget class="QPushButton" name="Btn_MAceptar">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>120</width>
@@ -1490,7 +1493,7 @@ QTableWidget QTableCornerButton::section
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_2"/>
+                    <widget class="QLineEdit" name="LE_AC"/>
                    </item>
                    <item>
                     <spacer name="horizontalSpacer_8">
@@ -1517,7 +1520,11 @@ QTableWidget QTableCornerButton::section
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_3"/>
+                    <widget class="QLineEdit" name="LE_ACC">
+                     <property name="echoMode">
+                      <enum>QLineEdit::Password</enum>
+                     </property>
+                    </widget>
                    </item>
                    <item>
                     <spacer name="horizontalSpacer_26">
@@ -1544,7 +1551,7 @@ QTableWidget QTableCornerButton::section
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_4"/>
+                    <widget class="QLineEdit" name="LE_RNA"/>
                    </item>
                    <item>
                     <spacer name="horizontalSpacer_27">
@@ -1571,7 +1578,11 @@ QTableWidget QTableCornerButton::section
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_5"/>
+                    <widget class="QLineEdit" name="LE_RNAC">
+                     <property name="echoMode">
+                      <enum>QLineEdit::Password</enum>
+                     </property>
+                    </widget>
                    </item>
                    <item>
                     <spacer name="horizontalSpacer_7">
@@ -1604,7 +1615,7 @@ QTableWidget QTableCornerButton::section
                     </spacer>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_2">
+                    <widget class="QPushButton" name="Btn_RNA">
                      <property name="minimumSize">
                       <size>
                        <width>120</width>
@@ -1641,7 +1652,7 @@ QTableWidget QTableCornerButton::section
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_27">
+                    <widget class="QLabel" name="LB_NM">
                      <property name="text">
                       <string/>
                      </property>
@@ -1706,12 +1717,66 @@ QTableWidget QTableCornerButton::section
                  <item>
                   <widget class="QStackedWidget" name="stackedWidget_2">
                    <property name="currentIndex">
-                    <number>2</number>
+                    <number>0</number>
                    </property>
-                   <widget class="QWidget" name="A_Consulta"/>
-                   <widget class="QWidget" name="A_RHuella"/>
-                   <widget class="QWidget" name="A_Man"/>
-                   <widget class="QWidget" name="A_HDatos"/>
+                   <widget class="QWidget" name="page"/>
+                   <widget class="QWidget" name="A_Consulta">
+                    <layout class="QVBoxLayout" name="verticalLayout_10">
+                     <item>
+                      <widget class="QPlainTextEdit" name="plainTextEdit">
+                       <property name="styleSheet">
+                        <string notr="true">font: 14pt &quot;Calibri&quot;;</string>
+                       </property>
+                       <property name="plainText">
+                        <string>La pestaña de consulta tiene como objetivo mostrar al administrador un despliegue de los registros guardados, tanto de todos los usuarios registrados asi como de aquellos que estan rentando un casillero, o en su defecto aquellos que estan en proceso de renovar su casillero, esto realizando una eleccion en el cuadro de seleccion que se encuentra en la parte superior de la tabla abajo del texto &quot;Registros&quot; generalmente la opcion de renovacion se encuentra vacia a menos que se encuentre activo dicho proceso, en la parte inferior de esta pestaña se encuentra un boton con el texto de refrescar este tiene como funcion actualizar los datos de la tabla sin tener que realizar otra elección en el cuadro de selección. Para mas informacion consulte el manual de operacion porporcionado por Locked&amp;Safe que contiene una descripcion mas ilustrativa</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="A_RHuella">
+                    <layout class="QVBoxLayout" name="verticalLayout_11">
+                     <item>
+                      <widget class="QPlainTextEdit" name="plainTextEdit_2">
+                       <property name="styleSheet">
+                        <string notr="true">font: 14pt &quot;Calibri&quot;;</string>
+                       </property>
+                       <property name="plainText">
+                        <string>La pestaña de registrar huella cuenta con el boton buscar, una vez ingresada la clave unica se mostrara en la parte inferior de la pestaña un mensaje el cual indica que el usuario esta registrado en la base de datos, en caso contrario se mostrara un mensaje el cual inicara que el usuario no existe, para registrar la huella del usuario es de suma importancia que el mensaje en la parte inferior de la pestaña indique que el usuario existe de otra manera el boton de acceso y registro de huella no tendran funcionamiento. Para mas información consulte el manual de operacion porporcionado por Locked&amp;Safe que contiene una descripcion mas ilustrativa</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="A_HDatos">
+                    <layout class="QVBoxLayout" name="verticalLayout_12">
+                     <item>
+                      <widget class="QPlainTextEdit" name="plainTextEdit_3">
+                       <property name="styleSheet">
+                        <string notr="true">font: 14pt &quot;Calibri&quot;;</string>
+                       </property>
+                       <property name="plainText">
+                        <string>La pestaña &quot;Horarios&quot; cuenta con dos campos de fecha y hora uno de ellos es para establecer la fecha y la hora de renta para posteriormente aplicar este  cambio en la base de datos, el otro campo de fecha y hora tiene el mismo funcionamiento pero este sirve para establecer el periodo de renovacion. Se cuenta con un campo en el cual una vez se presiona el boton consultar despliega los periodos guardados en la base de datos. Finalmente se cuenta con un cuadro de texto en el cual el administrador puede establecer el cupo (numero de usuarios) a atender por hora al presionar el boton establecer. Nota: Este Cupo se tiene que actualizar cada que comience un periodo. Para mas informacion consulte el manual de operacion porporcionado por Locked&amp;Safe que contiene una descripcion mas ilustrativa</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="A_Man">
+                    <layout class="QVBoxLayout" name="verticalLayout_13">
+                     <item>
+                      <widget class="QPlainTextEdit" name="plainTextEdit_4">
+                       <property name="styleSheet">
+                        <string notr="true">font: 14pt &quot;Calibri&quot;;</string>
+                       </property>
+                       <property name="plainText">
+                        <string>La pestaña mantenimiento cuenta con un cuadro de selección en el cual el administrador puede consultar que usuarios no han concluido el proceso de renta o renovacion. Si el periodo a concuido el boton de aceptar se habilitara para de esta manera depurar la base de datos y liberar los casilleros que no fueron rentados o renovados para que otro usuario pueda hacer uso de este. Finalmente en esta seccion se cuenta con cuadros de textos en los cuales se deben de ingresar las credenciales de un administrador para agregar un nuevo adminsitrador. Si el administrador ingresa sus credenciales de forma incorrecta se mostrara un mensaje indicando esto, en caso contrario los cuadros de texto se limpiaran y se mostrara un mensaje indicando que el nuevo administrador se ha registrado. Para mas informacion consulte el manual de operacion porporcionado por Locked&amp;Safe que contiene una descripcion mas ilustrativa
+</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
                   </widget>
                  </item>
                 </layout>
